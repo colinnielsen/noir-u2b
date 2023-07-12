@@ -1,8 +1,8 @@
-# Noir I2B
+# Noir u2b
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Nargo Test 🌌](https://github.com/colinnielsen/noir-i2b/actions/workflows/test.yml/badge.svg)](https://github.com/colinnielsen/noir-i2b/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Nargo Test 🌌](https://github.com/colinnielsen/noir-u2b/actions/workflows/test.yml/badge.svg)](https://github.com/colinnielsen/noir-u2b/actions/workflows/test.yml)
 
-**Noir I2B** contains helpers functions for converting unsigned integers to `[u8]` arrays of appropriate size
+**Noir u2b** contains helpers functions for converting unsigned integers to `[u8]` arrays of appropriate size
 
 ## Usage
 
@@ -10,13 +10,13 @@ In your `Nargo.toml` file, add the following dependency:
 
 ```toml
 [dependencies]
-i2b = { tag = "v0.1.0", git = "https://github.com/colinnielsen/noir-i2b" }
+u2b = { tag = "v0.2.0", git = "https://github.com/colinnielsen/noir-u2b" }
 ```
 
 Conversion functions are available for all unsigned integer types `u(8-64)`. They can be used as follows:
 
 ```rust
-use dep::i2b;
+use dep::u2b;
 
 fn main(){
     let num: u16 = 256;
