@@ -10,10 +10,10 @@ In your `Nargo.toml` file, add the following dependency:
 
 ```toml
 [dependencies]
-u2b = { tag = "v0.2.0", git = "https://github.com/colinnielsen/noir-u2b" }
+u2b = { tag = "v0.3.0", git = "https://github.com/colinnielsen/noir-u2b" }
 ```
 
-Conversion functions are available for all unsigned integer types `u(8-64)`. They can be used as follows:
+Conversion functions are available for all unsigned integer types `u(8-128)`. They can be used as follows:
 
 ```rust
 use dep::u2b;
