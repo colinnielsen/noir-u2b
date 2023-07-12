@@ -1,0 +1,7 @@
+[package]
+name = "noir-i2b"
+authors = ["@colinnielsen"]
+compiler_version = "0.6.0"
+notes = "AMDG"
+
+[dependencies]
