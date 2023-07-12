@@ -219,14 +219,14 @@ fn test_u64() {
     assert(two_byte[7] == 0x00);
 
     let random = u64_to_u8(0x1cbe443030);
-    assert(two_byte[0] == 0x00);
-    assert(two_byte[1] == 0x00);
-    assert(two_byte[2] == 0x00);
-    assert(two_byte[3] == 0x1c);
-    assert(two_byte[4] == 0xbe);
-    assert(two_byte[5] == 0x44);
-    assert(two_byte[6] == 0x30);
-    assert(two_byte[7] == 0x30);
+    assert(random[0] == 0x00);
+    assert(random[1] == 0x00);
+    assert(random[2] == 0x00);
+    assert(random[3] == 0x1c);
+    assert(random[4] == 0xbe);
+    assert(random[5] == 0x44);
+    assert(random[6] == 0x30);
+    assert(random[7] == 0x30);
 
     let ceil = u64_to_u8(18446744073709551615);
     assert(ceil[0] == 0xff);
