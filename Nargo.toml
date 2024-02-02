@@ -1,5 +1,6 @@
 [package]
 name = "u2b"
+type = "lib"
 authors = ["@colinnielsen"]
 compiler_version = "0.8.0"
 notes = "AMDG"
