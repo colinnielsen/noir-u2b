@@ -1,5 +1,5 @@
 [package]
-name = "noir-u2b"
+name = "u2b"
 authors = ["@colinnielsen"]
 compiler_version = "0.8.0"
 notes = "AMDG"
