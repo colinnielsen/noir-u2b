@@ -1,4 +1,4 @@
-fn u16_to_u8(num: u16) -> [u8; 2] {
+pub fn u16_to_u8(num: u16) -> [u8; 2] {
     let mut out: [u8; 2] = [0; 2];
     for i in 0..2 {
         out[i] = (num >> (8 - (i * 8))) as u8;
@@ -82,7 +82,7 @@ fn test_u32() {
     assert(ceil[3] == 0xff);
 }
 
-fn u40_to_u8(num: u40) -> [u8; 5] {
+pub fn u40_to_u8(num: u40) -> [u8; 5] {
     let mut out: [u8; 5] = [0; 5];
     for i in 0..5 {
         out[i] = (num >> (32 - (i * 8))) as u8;
@@ -116,7 +116,7 @@ fn test_u40() {
     assert(ceil[4] == 0xff);
 }
 
-fn u48_to_u8(num: u48) -> [u8; 6] {
+pub fn u48_to_u8(num: u48) -> [u8; 6] {
     let mut out: [u8; 6] = [0; 6];
     for i in 0..6 {
         out[i] = (num >> (40 - (i * 8))) as u8;
@@ -153,7 +153,7 @@ fn test_u48() {
     assert(ceil[5] == 0xff);
 }
 
-fn u56_to_u8(num: u56) -> [u8; 7] {
+pub fn u56_to_u8(num: u56) -> [u8; 7] {
     let mut out: [u8; 7] = [0; 7];
     for i in 0..7 {
         out[i] = (num >> (48 - (i * 8))) as u8;
@@ -193,7 +193,7 @@ fn test_u56() {
     assert(ceil[6] == 0xff);
 }
 
-fn u64_to_u8(num: u64) -> [u8; 8] {
+pub fn u64_to_u8(num: u64) -> [u8; 8] {
     let mut out: [u8; 8] = [0; 8];
     for i in 0..8 {
         out[i] = (num >> (56 - (i * 8))) as u8;
@@ -246,7 +246,7 @@ fn test_u64() {
     assert(ceil[7] == 0xff);
 }
 
-fn u72_to_u8(num: u72) -> [u8; 9] {
+pub fn u72_to_u8(num: u72) -> [u8; 9] {
     let mut out: [u8; 9] = [0; 9];
     for i in 0..9 {
         out[i] = (num >> (64 - (i * 8))) as u8;
@@ -292,7 +292,7 @@ fn test_u72() {
     assert(ceil[8] == 0xff);
 }
 
-fn u80_to_u8(num: u80) -> [u8; 10] {
+pub fn u80_to_u8(num: u80) -> [u8; 10] {
     let mut out: [u8; 10] = [0; 10];
     for i in 0..10 {
         out[i] = (num >> (72 - (i * 8))) as u8;
@@ -341,7 +341,7 @@ fn test_u80() {
     assert(ceil[9] == 0xff);
 }
 
-fn u88_to_u8(num: u88) -> [u8; 11] {
+pub fn u88_to_u8(num: u88) -> [u8; 11] {
     let mut out: [u8; 11] = [0; 11];
     for i in 0..11 {
         out[i] = (num >> (80 - (i * 8))) as u8;
@@ -393,7 +393,7 @@ fn test_u88() {
     assert(ceil[10] == 0xff);
 }
 
-fn u96_to_u8(num: u96) -> [u8; 12] {
+pub fn u96_to_u8(num: u96) -> [u8; 12] {
     let mut out: [u8; 12] = [0; 12];
     for i in 0..12 {
         out[i] = (num >> (88 - (i * 8))) as u8;
@@ -448,7 +448,7 @@ fn test_u96() {
     assert(ceil[11] == 0xff);
 }
 
-fn u104_to_u8(num: u104) -> [u8; 13] {
+pub fn u104_to_u8(num: u104) -> [u8; 13] {
     let mut out: [u8; 13] = [0; 13];
     for i in 0..13 {
         out[i] = (num >> (96 - (i * 8))) as u8;
@@ -506,7 +506,7 @@ fn test_u104() {
     assert(ceil[12] == 0xff);
 }
 
-fn u112_to_u8(num: u112) -> [u8; 14] {
+pub fn u112_to_u8(num: u112) -> [u8; 14] {
     let mut out: [u8; 14] = [0; 14];
     for i in 0..14 {
         out[i] = (num >> (104 - (i * 8))) as u8;
@@ -567,7 +567,7 @@ fn test_u112() {
     assert(ceil[13] == 0xff);
 }
 
-fn u120_to_u8(num: u120) -> [u8; 15] {
+pub fn u120_to_u8(num: u120) -> [u8; 15] {
     let mut out: [u8; 15] = [0; 15];
     for i in 0..15 {
         out[i] = (num >> (112 - (i * 8))) as u8;
@@ -631,7 +631,7 @@ fn test_u120() {
     assert(ceil[14] == 0xff);
 }
 
-fn u8_to_u8(num: u8) -> [u8; 1] {
+pub fn u8_to_u8(num: u8) -> [u8; 1] {
     let out: [u8; 1] = [num];
 
     out
@@ -642,7 +642,7 @@ fn test_u8() {
     let small = u8_to_u8(10);
     assert(small.len() == 1);
     assert(small[0] == 10);
- 
+
     let ceil = u8_to_u8(255);
     assert(ceil[0] == 0xff);
 }
